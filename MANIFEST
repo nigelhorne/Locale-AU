@@ -20,6 +20,7 @@ t/kwalitee.t
 t/links.t
 t/manifest.t
 t/metrics.t
+t/no404s.t
 t/noplan.t
 t/pod-cm.t
 t/pod.t

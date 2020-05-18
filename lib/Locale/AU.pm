@@ -126,10 +126,6 @@ You can also look for information at:
 
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Locale-AU>
 
-=item * AnnoCPAN: Annotated CPAN documentation
-
-L<http://annocpan.org/dist/Locale-AU>
-
 =item * CPAN Ratings
 
 L<http://cpanratings.perl.org/d/Locale-AU>
