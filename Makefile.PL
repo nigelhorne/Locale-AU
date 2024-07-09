@@ -11,15 +11,15 @@ WriteMakefile(
      ($ExtUtils::MakeMaker::VERSION >= 6.3002))
       ? ('LICENSE'=> 'GPL')
       : ()),
-    PL_FILES            => {},
+    PL_FILES => {},
     BUILD_REQUIRES => {
-	'Test::Most' => 0,
-	'Test::NoWarnings' => 0,
-	# 'Test::Kwalitee' => 0,
     }, PREREQ_PM => {
 	'Data::Section::Simple' => 0,
     }, TEST_REQUIRES => {
-    	'Test::Most' => 0
+	# 'Test::Kwalitee' => 0,
+    	'Test::Most' => 0,
+	'Test::Needs' => 0,
+	'Test::NoWarnings' => 0,
     },
     dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
     clean               => { FILES => 'Locale-AU-*' },
