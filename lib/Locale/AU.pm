@@ -122,13 +122,21 @@ You can also look for information at:
 
 =over 4
 
+=item * MetaCPAN
+
+L<https://metacpan.org/dist/Local-AU>
+
 =item * RT: CPAN's request tracker
 
-L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Locale-AU>
+L<https://rt.cpan.org/NoAuth/Bugs.html?Dist=Local-AU>
 
-=item * Search CPAN
+=item * CPAN Testers' Matrix
 
-L<http://search.cpan.org/dist/Locale-AU/>
+L<http://matrix.cpantesters.org/?dist=Local-AU>
+
+=item * CPAN Testers Dependencies
+
+L<http://deps.cpantesters.org/?module=Locale::AU>
 
 =back
 

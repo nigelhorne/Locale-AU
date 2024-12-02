@@ -4,7 +4,6 @@ LICENSE
 Makefile.PL
 MANIFEST			This list of files
 MANIFEST.SKIP
-pod-links.t
 README
 README.md
 t/00-load.t
@@ -25,9 +24,11 @@ t/gv.t
 t/kwalitee.t
 t/manifest.t
 t/metrics.t
+t/modules-used.t
 t/no404s.t
 t/noplan.t
 t/pod-cm.t
+t/pod-links.t
 t/pod-spelling.t
 t/pod.t
 t/port.t
