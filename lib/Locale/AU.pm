@@ -126,10 +126,6 @@ You can also look for information at:
 
 L<http://rt.cpan.org/NoAuth/Bugs.html?Dist=Locale-AU>
 
-=item * CPAN Ratings
-
-L<http://cpanratings.perl.org/d/Locale-AU>
-
 =item * Search CPAN
 
 L<http://search.cpan.org/dist/Locale-AU/>
@@ -142,7 +138,7 @@ Based on L<Locale::US> - Copyright (c) 2002 - C<< $present >> Terrence Brannon.
 
 =head1 LICENSE AND COPYRIGHT
 
-Copyright 2020 Nigel Horne.
+Copyright 2020-2024 Nigel Horne.
 
 This program is released under the following licence: GPL2
 
