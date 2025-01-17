@@ -53,25 +53,10 @@ sub new {
 		$class = __PACKAGE__;
 	}
 
-	my %params;
-	if(ref($_[0]) eq 'HASH') {
-		# If the first argument is a hash reference, dereference it
-		%params = %{$_[0]};
-	} elsif(scalar(@_) % 2 == 0) {
-		# If there is an even number of arguments, treat them as key-value pairs
-		%params = @_;
-	} else {
-		# If there is an odd number of arguments, treat it as an error
-		Carp::croak(__PACKAGE__, ': Invalid arguments passed to new()');
-		return;
-	}
-
 	# Parse the data into bidirectional mappings
 	my $self = {};
 
-	my $data = Data::Section::Simple::get_data_section('states');
-
-	my @line = split /\n/, $data;
+	my @line = split /\n/, Data::Section::Simple::get_data_section('states');
 
 	for (@line) {
 		my($code, $state) = split /:/;
