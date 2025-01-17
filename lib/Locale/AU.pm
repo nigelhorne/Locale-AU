@@ -35,14 +35,38 @@ our $VERSION = '0.01';
 
 Creates a Locale::AU object.
 
+Can be called both as a class method (Locale::AU->new()) and as an object method ($object->new()).
+
 =cut
 
 sub new {
 	my $proto = shift;
 	my $class = ref($proto) || $proto;
 
-	return unless(defined($class));
+	# If the class is undefined, fallback to the current package name
+	if(!defined($class)) {
+		# Use Locale::AU->new(), not Locale::AU::new()
+		# Carp::carp(__PACKAGE__, ' use ->new() not ::new() to instantiate');
+		# return;
 
+		# FIXME: this only works when no arguments are given
+		$class = __PACKAGE__;
+	}
+
+	my %params;
+	if(ref($_[0]) eq 'HASH') {
+		# If the first argument is a hash reference, dereference it
+		%params = %{$_[0]};
+	} elsif(scalar(@_) % 2 == 0) {
+		# If there is an even number of arguments, treat them as key-value pairs
+		%params = @_;
+	} else {
+		# If there is an odd number of arguments, treat it as an error
+		Carp::croak(__PACKAGE__, ': Invalid arguments passed to new()');
+		return;
+	}
+
+	# Parse the data into bidirectional mappings
 	my $self = {};
 
 	my $data = Data::Section::Simple::get_data_section('states');
@@ -51,7 +75,9 @@ sub new {
 
 	for (@line) {
 		my($code, $state) = split /:/;
+		# Map codes to states
 		$self->{code2state}{$code} = $state;
+		# Map states to codes
 		$self->{state2code}{$state} = $code;
 	}
 
