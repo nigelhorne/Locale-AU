@@ -34,15 +34,21 @@ WriteMakefile(
     },
     clean               => { FILES => 'Locale-AU-*' },
     dist => $dist,
-    META_MERGE		=> {
-    	'meta-spec' => { version => 2 },
-    	resources => {
-    		repository => {
-			type => 'git',
-			url => 'git://github.com/nigelhorne/Locale-AU.git',
-			web => 'https://github.com/nigelhorne/Locale-AU-Info',
-    		},
+	META_MERGE => {	# https://perldoc.perl.org/CPAN::Meta::Spec
+		'meta-spec' => { version => 2 },
+		resources => {
+			repository => {
+				repository => 'https://github.com/nigelhorne/Locale-AU',
+				type => 'git',
+				url => 'git://github.com/nigelhorne/Locale-AU.git',
+				web => 'https://github.com/nigelhorne/Locale-AU'
+			}, bugtracker => {
+				mailto => 'bug-Locale-AU@rt.cpan.org',
+				url => 'https://github.com/nigelhorne/Locale-AU/issues',
+				# web => 'https://rt.cpan.org/Public/Dist/Display.html?Name=Locale-AU',
+				web => 'https://github.com/nigelhorne/Locale-AU/issues'
+			}
+		},
 	},
-    },
     MIN_PERL_VERSION	=> '5.6.2'	# Probably would work, but never tested on earlier versions than this
 );

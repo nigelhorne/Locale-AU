@@ -1,5 +1,8 @@
 Revision history for Locale-AU
 
+0.03
+	Fix the web location in the Makefile
+
 0.02	Sun Feb  2 16:15:18 EST 2025
 	Added t/40-basics.t
 	Use Test::DescribeMe to simplify tests
