@@ -36,5 +36,4 @@ t/prereq.t
 t/snippets.t
 t/strict.t
 t/unused.t
-t/used.t
 t/vars.t
