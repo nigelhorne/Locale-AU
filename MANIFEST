@@ -20,6 +20,7 @@ t/cv.t
 t/dist.t
 t/eof.t
 t/eol.t
+t/fuzz.t
 t/gv.t
 t/kwalitee.t
 t/manifest.t
